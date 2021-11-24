@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
+    <title>STC's Portfolio</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/blog/templatemo-style.css" />
+    <link rel="stylesheet" href="assets/css/owl.css" />
+    <link rel="stylesheet" href="assets/css/lightbox.css" />
+  </head>
+
+  <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <div id="page-wraper">
+      <!-- Sidebar Menu -->
+      <div class="responsive-nav">
+        <audio controls autoplay>
+          <source src="assets/audio/alltowell.mp3" type="audio/mpeg">
+        </audio>
+      <div class="responsive-nav">
+        <i class="fa fa-bars" id="menu-toggle"></i>
+        <div id="menu" class="menu">
+          <i class="fa fa-times" id="menu-close"></i>
+          <div class="container">
+            <div class="image">
+              <a href="#"><img src="assets/images/author-image.jpg" alt="" /></a>
+            </div>
+            <div class="author-content">
+              <h4>Sử Thành Công</h4>
+              <p>Sinh viên năm 2 </p>
+              <span>Chuyên ngành KHDL&amp;TTNT</span>
+              <p> Khoa Kỹ thuật Công nghệ, Đại học Huế</p>
+
+            </div>
+            <a href="index.html" style="color:#F1F2F3;size:30px;"><i class="fa fa-home" aria-hidden="true"></i><spam> HOME</spam></a>
+            <nav class="main-nav" role="navigation">
+              <ul class="main-menu">
+                <li><a href="#section1">My project</a></li>
+                <li><a href="#" target="_blank">My Resume <i class="fa fa-download" aria-hidden="true"></i></a></li>
+              </ul>
+            </nav>
+            <div class="social-network">
+              <ul class="soial-icons">
+                <li>
+                  <a href="https://www.facebook.com/stc1702/" target="_blank"
+                    ><i class="fa fa-facebook"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://github.com/congltk1234" target="_blank"><i class="fa fa-github"></i></a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/s%E1%BB%AD-th%C3%A0nh-c%C3%B4ng-081a26221/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                </li>
+              </ul>
+            </div>
+            <div class="copyright-text">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="section my-services" data-section="section2">
+        <div class="container_a">
+          <div class="section-heading">
+            <h2>Tập tành viết Crawl và phân tích dữ liệu Laptop trên Lazada bằng Python (Phần 1)</h1>
+            <div class="line-dec"></div>
+          </div>
+          <div class="content-full">
+            <h3 class="dateline">Sunday, Nov 21st, 2021</h3>
+            <p class="intro">Trong bài viết này mình sẽ giới thiệu với các bạn cách sử dụng Selenium và Scrapy trong Python 
+              để scrape dữ liệu laptop từ trang <a href="#">Lazada</a>. Sau đó dùng các thư viện phân tích dữ liệu
+               như Numpy, Pandas trong Python để tiến hành phân tích dữ liệu.</p>
+            <h4>Lưu ý</h4>
+            <li>Cần biết về python cơ bản (hiển nhiên gòi)</li>
+            <li>Tìm hiểu 1 ít về Xpath</li>
+            <li>Đọc qua document của các thư viện được đề cập trong bài viết</li>
+
+            <p></p>
+            <h2>1. Xác định thông tin cần lấy</h2>
+            <p>Trước khi bắt tay vào làm chúng ta cần xem qua trang web Lazada:
+              </p>
+              <li><a href="https://www.lazada.vn/laptop/?page=1" target="_blank">Trang hiển thị danh mục sản phẩm: </a> </li>
+            <img src="assets/images/blog1/hinh1.png" alt="website template image" class="content-img" />
+            <li><a href="https://www.lazada.vn/products/laptop-dell-vostro-3400-14-inches-fhd-intel-i5-1135g7-8gb-256gb-ssd-office-hs19-mcafee-mds-win-10-home-sl-l-black-l-p132g003-70253900-l-hang-chinh-hang-i1519862701-s6378291461.html?spm=a2o4n.searchlistcategory.bestshown_1.2.157a68e5JuwXtR&search=1" target="_blank">Trang hiển thị thông tin chi tiết của sản phẩm:  </a> </li>
+            <img src="assets/images/blog1/hinh2.png" alt="website template image" class="content-img" />
+            <p class="intro">Sau khi check xong các bạn nên list ra những thông tin cần lấy về vào 1 file nháp:</p>
+            <img src="assets/images/blog1/hinh3.png" alt="website template image" class="content-img" style="width:30%" />
+            <h2>2. Cách Inspect để lấy thông tin</h2>
+            <p>Vd: Để có thể tìm được đường dẫn sản phẩm trong danh mục hiển thị, 
+              chúng ta click phải chuột vào đường dẫn đến sản phẩm (tên sản phẩm) và chọn inspect:</p>
+            <img src="assets/images/blog1/hinh4.png" alt="website template image" class="content-img" />
+            <p>Cửa sổ DevTools sẽ bật lên và hiển thị vị trí của đường dẫn bạn đang trỏ nằm ở đâu trong file html:</p>
+            <img src="assets/images/blog1/hinh5.png" alt="website template image" class="content-img" />
+            <p class="a"></p>
+            <p>Sau khi xem qua 1 (hoặc nhiều sản phẩm cho chắc ăn) , đường dẫn đến sản phẩm sẽ nằm trong tag a, thuộc class=”RfADt”.</p>
+             <p class="intro"> Như vậy xpath tương ứng sẽ là  <span>'//*[@class="RfADt"]/a'</span>. Sau đó bạn thực hiện tương tự đối với các thông tin khác và nhớ note lại nhé.
+              </p>
+            <h2>3. Crawl dữ liệu trên Lazada bằng Scrapy và Selenium:</h2>
+            <p>Lưu ý:</p>
+            <li>Để cài đặt thư viện liên quan: <span>pip install -r requirements.txt</span></li>
+            <li>Trình duyệt trong bài viết sử dụng là Chrome nên mình chọn webdrive là ChromeDrive Version 96.0.4664.45.
+               Cacban cần lưu ý chọn phiên bản webdrive phù hợp với trình duyệt.</li>
+            <li>Để check phiên bản Chrome hiện tại: chrome://settings/help</li> 
+            <li>Tìm phiên bản tương ứng và tải về tại <span><a href="https://chromedriver.chromium.org/downloads" target="_blank">đây</a></span></li>
+            <img src="assets/images/blog1/hinh6.png" alt="website template image" class="content-img" style="width:60%" />
+              <p></p>
+            <h3>a. Sử dụng Selenium để lấy đường dẫn sản phẩm:</h3>
+            <p>Ta thấy trong danh mục laptop của Lazada, đường dẫn sẽ có dạng:</p>
+            <li>Trang 1: https://www.lazada.vn/laptop/?page=1 </li>
+            <li>Trang 2: https://www.lazada.vn/laptop/?page=2 </li>
+            <li>Trang n: "https://www.lazada.vn/laptop/?page=" + "n" </li>
+            <p> Áp dụng vòng lặp For để có thể duyệt qua các trang khác.</p>
+            <img src="assets/images/blog1/forr.png" alt="website template image" class="content-img" style="width:70%" />
+            <p>Giải thích cách hoạt động của Selenium:</p>
+            <img src="assets/images/blog1/selee.png" alt="website template image" class="content-img" style="width:70%" />
+            <p>Kết hợp lại ta sẽ có:</p>
+            <img src="assets/images/blog1/h7.png" alt="website template image" class="content-img" style="width:70%" />
+            <p class="intro">Sau khi đã lấy được danh sách sản phẩm, chúng ta lưu nó vào 1 file text để chút nữa xài nha.</p>
+            <p>Vì sao phải dừng 30s?  Các bạn có thể thay đổi thời gian nhanh hơn (hoặc chậm hơn)
+               chứ mình để vậy để tránh “detected unusual traffic” từ Lazada 
+               ( Hiện nay các trang TMĐT làm vậy để chống DDOS Attack, nghẽn mạng khi có quá nhiều người truy cập,
+                hay mấy con bot cào dữ liệu như mình làm chẳng hạn,...)</p>
+                <h3>b. Sử dụng Scrapy để lấy dữ liệu chi tiết sản phẩm:</h3>
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'><span style='font-family:"Arial",sans-serif;color:#4A4A4A;'>Tạo project Scrapy:&nbsp;</span></p>
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'><span style='font-family:"Arial",sans-serif;color:#4A4A4A;'>Mở terminal ở thư mục cần tạo&nbsp;</span></p>
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'><span style="font-size:15px;line-height:107%;font-family:Consolas;color:#24292E;background:#F1F2F3;">scrapy startproject &lt;project_name&gt;</span></p>
+            <img src="assets/images/blog1/h8.png" alt="website template image" class="content-img" style="width:70%"/>
+            <p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'><span style='font-family:"Arial",sans-serif;color:#4A4A4A;'>Sau đ&oacute; chuyển đến thư mục vừa tạo để tiếp tục tạo con bot bằng lệnh:</span></p>
+            <p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'><span style="font-size:15px;line-height:107%;font-family:Consolas;color:#24292E;background:#F1F2F3;">scrapy genspider &ndash;t basic &lt;bot_name&gt; &lt;domain&gt;</span></p>
+            <p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'><span style='font-family:"Arial",sans-serif;color:#4A4A4A;'>Đ&acirc;y l&agrave; cấu tr&uacute;c thư mục ch&uacute;ng ta vừa tạo th&ocirc;ng qua Scrapy</span></p>
+            <img src="assets/images/blog1/h9.png" alt="website template image" class="content-img" style="width:40%"/>
+            <p>Các bạn cần đọc qua guide của <a href="https://docs.scrapy.org/en/latest/intro/tutorial.html" target="_blank">Scrapy</a> trước để nắm sương sương. Còn gọn lẹ thì chủ yếu mình sẽ chỉnh sửa 2 file là item.py và spiders/lazada.py:</p>
+            <li>Ở file item.py thì cứ dựa vào hướng dẫn để nhập vào list các thứ các bạn cần crawl (lập ở đầu bài viết):</li>
+            <img src="assets/images/blog1/h10.png" alt="website template image" class="content-img" style="width:50%"/>
+            <li>Còn đối với file lazada.py:</li>
+            <img src="assets/images/blog1/h11.png" alt="website template image" class="content-img" style="width:100%"/>
+            <p></p>
+            <p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'><span style='font-family:"Arial",sans-serif;color:#4A4A4A;'>Lần lượt đọc link đ&atilde; lưu trong file text, x&aacute;c định xpath (bằng inspect) v&agrave; lưu lại trong class &ldquo;LaptopItem&rdquo;</span></p>
+            <p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'><span style='font-family:"Arial",sans-serif;color:#4A4A4A;'>V&agrave; để chạy con bot n&agrave;y th&igrave; bạn quay lại terminal g&otilde; lệnh</span></p>
+            <p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'><span style="font-size:15px;line-height:107%;font-family:Consolas;color:#24292E;background:#F1F2F3;">scrapy crawl &lt;bot_name&gt; -o &lt;t&ecirc;n_file.csv&gt;</span></p>
+            <img src="assets/images/blog1/h12.png" alt="website template image" class="content-img" style="width:100%"/>
+            <p></p>
+            <p>Đến đây chỉ việc treo máy, mở tab khác hay chơi game và đợi sản phẩm thoy.</p>
+            <p class="intro">Mình chạy thì Crawl được 650 link (650 sản phẩm) với tốc độ chầm chậm (3-4 sản phẩm/phút). Các bạn có thể tham khảo File và code chi tiết tại <a href="https://github.com/congltk1234/LaptopAnalyst" target="_blank">đây</a>.</p>
+            <h2>4. Tổng kết</h2>
+            <p>Tuy hướng làm của mình khá đơn giản có thể lấy được dữ liệu nhưng vẫn còn nhiều thiếu sót. 1 số nhược điểm còn gặp phải:</p>
+            <li>Delay để tránh bị quét nên Tốc độ Crawl tương đối chậm.</li>
+            <li>Chưa lấy được những thông tin thêm như: Rate, Feedback sản phẩm, lượng người xem/lượt truy cập, thông số kỹ thuật,…</li>
+            <li>Cần tới 2 bước (1 bước tìm đường dẫn sản phẩm, 1 bước lấy thông tin chi tiết sản phẩm)</li>
+            <li>Bị lag mạng, cúp điện, màn hình xanh giữa đường là chạy lại từ đầu </li>
+            <li>Bot chưa thông minh còn dại khờ như người viết post </li>
+            <p class="intro"></p>
+            <p>Hướng khắc phục trong tương lai:</p>
+            <li>Bot tự đổi ip liên tục để tránh bị quét</li>
+            <li>Gộp 2 bước tìm link và lấy thông tin vào trong 1 bước</li>
+            <li>Tương tác với API thay vì dùng bot crawl (vừa tránh nghẽn mạng, vừa tránh qét)</li>
+            <p class="intro"> </p>
+            <p>Trên đây là phần 1 chủ yếu tập trung vào việc thu thập dữ liệu, phần 2 sẽ sớm hoàn thiện để gửi đến cacban. Hy vọng bài viết này sẽ giúp ích ít nhiều cho các bạn. Chúc cacban có 1 ngày thật đẹp :></p>
+          </div>
+
+
+
+          </div>
+        
+      </section>
+
+      <section class="section about-me" data-section="section1">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Other Project<h2>
+            <div class="line-dec"></div>
+          </div>
+          </div>
+          <div class="right-image-post">
+            <div class="row">
+              <div class="col-md-6" style="background-color: #c73e08c7">
+                <div class="left-text">
+                  <h4>Simple Crawler with Python using BeautifulSoup</h4>
+                  <span>Freshman's project</span>
+                  <p> Create a simple Crawling system. This is my first project and i got A mark <i class="fa fa-smile-o" aria-hidden="true"></i>
+                    
+                  </p>
+                  <div class="white-button">
+                    <a href="blog2.html">Read More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-image">
+                  <img src="assets/images/blog2.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-image-post">
+            <div class="row">
+              <div class="col-md-6" style="background-color: #c73e08c7">
+                <div class="left-text">
+                  <h4>Covid-19 Data Visualization with R</h4>
+                  <span>Freshman's project</span>
+                  <p>
+                    I Used Plotly library in R to visualize Covid-19 data from 
+                    <a style="color: #fafd52f5" href="https://github.com/CSSEGISandData/COVID-19" target="_blank">Johns Hopkins University</a>
+          
+                  </p>
+                  <div class="white-button">
+                    <a href="blog3.html">Read More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-image">
+                  <img src="assets/images/blog3.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          
+        </div>
+        
+      </section>
+
+
+
+
+    </div>
+
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+      //according to loftblog tut
+      $(".main-menu li:first").addClass("active");
+
+      var showSection = function showSection(section, isAnimate) {
+        var direction = section.replace(/#/, ""),
+          reqSection = $(".section").filter(
+            '[data-section="' + direction + '"]'
+          ),
+          reqSectionPos = reqSection.offset().top - 0;
+
+        if (isAnimate) {
+          $("body, html").animate(
+            {
+              scrollTop: reqSectionPos
+            },
+            800
+          );
+        } else {
+          $("body, html").scrollTop(reqSectionPos);
+        }
+      };
+
+      var checkSection = function checkSection() {
+        $(".section").each(function() {
+          var $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+          if (topEdge < wScroll && bottomEdge > wScroll) {
+            var currentId = $this.data("section"),
+              reqLink = $("a").filter("[href*=\\#" + currentId + "]");
+            reqLink
+              .closest("li")
+              .addClass("active")
+              .siblings()
+              .removeClass("active");
+          }
+        });
+      };
+
+      $(".main-menu").on("click", "a", function(e) {
+        e.preventDefault();
+        showSection($(this).attr("href"), true);
+      });
+
+      $(window).scroll(function() {
+        checkSection();
+      });
+    </script>
+    <script>
+      //Get the button
+      var mybutton = document.getElementById("myBtn");
+      
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+      
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+      </script>
+  </body>
+</html>
