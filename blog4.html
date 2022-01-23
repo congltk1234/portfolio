@@ -19,18 +19,21 @@
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="assets/css/fontawesome.css" />
-    <link rel="stylesheet" href="assets/css/templatemo-style.css" />
+    <link rel="stylesheet" href="assets/css/blog/templatemo-style.css" />
     <link rel="stylesheet" href="assets/css/owl.css" />
     <link rel="stylesheet" href="assets/css/lightbox.css" />
   </head>
 
   <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    
     <div id="page-wraper">
       <!-- Sidebar Menu -->
       <div class="responsive-nav">
-        <audio controls autoplay>
+        <audio controls autoplay style="align-items: right;">
           <source src="assets/audio/alltowell.mp3" type="audio/mpeg">
         </audio>
+      <div class="responsive-nav">
         <i class="fa fa-bars" id="menu-toggle"></i>
         <div id="menu" class="menu">
           <i class="fa fa-times" id="menu-close"></i>
@@ -45,9 +48,9 @@
               <p> Khoa Kỹ thuật Công nghệ, Đại học Huế</p>
 
             </div>
+            <a href="index.html" style="color:#F1F2F3;size:30px;"><i class="fa fa-home" aria-hidden="true"></i><spam> HOME</spam></a>
             <nav class="main-nav" role="navigation">
               <ul class="main-menu">
-                <li><a href="#section2">About me</a></li>
                 <li><a href="#section1">My project</a></li>
                 <li><a href="#" target="_blank">My Resume <i class="fa fa-download" aria-hidden="true"></i></a></li>
               </ul>
@@ -74,77 +77,49 @@
       </div>
 
       <section class="section my-services" data-section="section2">
-        <div class="container">
+        <div class="container_a">
           <div class="section-heading">
-            <h2>About me</h2>
+            <h2>Analysis Laptop's Feature</h1>
             <div class="line-dec"></div>
           </div>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="service-item">
-                <div class="first-service-icon service-icon"></div>
-                <h4>Soft Skill</h4>
-                <p></p>
-                <li>Creative Think</li>
-                <li>Self-study &amp; Research</li>
-                <li>Teamwork</li>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="service-item">
-                <div class="second-service-icon service-icon"></div>
-                <h4>Front-end</h4>
-                <p></p>
-                <li>Hiểu và nắm những kiến thức về HTML/CSS</li>
-                <li>Biết Sử dụng XD, Canva và Figma để thiết giao diện</li>
-                <li>Hiện mình đang tìm hiểu về Reactjs/Notejs</li>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="service-item">
-                <div class="third-service-icon service-icon"></div>
-                <h4>Kỹ năng lập trình</h4>
-                <p>
-                  Ngoài kiến thức được dạy ở trường, mình vẫn tiếp tục tìm hiểu 
-                  qua các Course và Blog về lập trình cũng như trau dồi thông qua các dự án cá nhân.
-                </p>
-                <li>Coding Languages: Python, R</li>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="service-item">
-                <div class="fourth-service-icon service-icon"></div>
-                <h4>Làm việc với dữ liệu</h4>
-                <p>
-                  Tiếp tục trau dồi và học hỏi thêm nhiều kỹ năng để trở thành DataScientist trong tương lai <i class="fas fa-loveseat    "></i>
-                </p>
-                <li>Analyst &amp; Visualization: Excel, Python &amp; R</li>
-                <li>Keep learning...</li>
-              </div>
-            </div>
+          <div class="content-full">
+            <h3 class="dateline">Monday, Jan 21st, 2022</h3>
+            <span>Sophomore's project</span>
+            <p> Using Selenium for collect data of Laptop products on
+              <a style="color: #833f00f5" href="https://www.dienmayxanh.com/laptop" target="_blank">DienMayXanh</a>,
+              <a style="color: #833f00f5" href="https://fptshop.com.vn/may-tinh-xach-tay?sort=ban-chay-nhat&trang=1" target="_blank">FPTShop</a>                    
+              and 
+              <a style="color: #833f00f5" href="https://phongvu.vn/laptop-macbook-scat.01-N001" target="_blank">PhongVu</a>.
+              Base on collected data, use statistics and hypothesis to find insight. 
+              
+            </p>
+            <iframe src="https://drive.google.com/file/d/1xpyn1NidQp8mvXA7mZe9IdNxr2a6HOux/preview"
+            width='100%' height='800px' frameborder='0' allow="autoplay"></iframe>
+          
+
+
+
+
           </div>
-        </div>
+        
       </section>
 
       <section class="section about-me" data-section="section1">
         <div class="container">
           <div class="section-heading">
-            <h2>My Project<h2>
+            <h2>Other Project<h2>
             <div class="line-dec"></div>
           </div>
-          <div class="left-image-post">
+          </div>
+          <div class="right-image-post">
             <div class="row">
-              <div class="col-md-6">
-                <div class="left-image">
-                  <img src="assets/images/blog1/hinh5.png" alt="" />
-                </div>
-              </div>
-              <div class="col-md-6" style="background-color: #f78c12f5" >
-                <div class="right-text">
-                  <h4>Scraping product with Python</h4>
-                  <span>Sophomore's project</span>
+              <div class="col-md-6" style="background-color: #c73e08c7">
+                <div class="left-text">
+                  <h4>Scraping & Analyst product with Python (part1)</h4>
+                  <span>[On-Going] Sophomore's project</span>
                   <p>
                     Using Selenium and Scrapy to collect data from e-commerce website.
+                    Base on collected data, use stactistic and model to find insight.
 
 
                   </p>
@@ -153,88 +128,20 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div class="right-image-post">
-            <div class="row">
-              <div class="col-md-6" style="background-color: #602f00d6">
-                <div class="left-text">
-                  <h4>Analysis Laptop's Feature</h4>
-                  <span>Sophomore's project</span>
-                  <p> Using Selenium for collect data of Laptop products on
-                    <a style="color: #fafd52f5" href="https://www.dienmayxanh.com/laptop" target="_blank">DienMayXanh</a>,
-                    <a style="color: #fafd52f5" href="https://fptshop.com.vn/may-tinh-xach-tay?sort=ban-chay-nhat&trang=1" target="_blank">FPTShop</a>                    
-                    and 
-                    <a style="color: #fafd52f5" href="https://phongvu.vn/laptop-macbook-scat.01-N001" target="_blank">PhongVu</a>.
-                    Base on collected data, use statistics and hypothesis to find insight. 
-                    
-                  </p>
-                  <div class="white-button">
-                    <a href="blog4.html">Read More</a>
-                  </div>
-                </div>
-              </div>
               <div class="col-md-6">
                 <div class="right-image">
-                  <img src="assets/images/blog4.png" alt="" />
+                  <img src="assets/images/blog1/hinh5.png" alt="" />
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="right-image-post">
-            <div class="row">
-              <div class="col-md-6" style="background-color: #966501">
-                <div class="left-text">
-                  <h4>Predict the Trendline of COVID-19 in Vietnam</h4>
-                  <span>Sophomore's project</span>
-                  <p> Using Hypothesis and SIR model to evaluate the peak of outbreak, then predict the trendline of newcases in Vietnam.
-                    
-                  </p>
-                  <div class="white-button">
-                    <a href="blog5.html">Read More</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="right-image">
-                  <img src="assets/images/blog5.png" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-
           <div class="right-image-post">
             <div class="row">
               <div class="col-md-6" style="background-color: #c73e08c7">
                 <div class="left-text">
-                  <h4>Covid-19 Data Visualization with R</h4>
-                  <span>Freshman's project</span>
-                  <p>
-                    I Used Plotly library in R to visualize Covid-19 data from 
-                    <a style="color: #fafd52f5" href="https://github.com/CSSEGISandData/COVID-19" target="_blank">Johns Hopkins University</a>
-          
-                  </p>
-                  <div class="white-button">
-                    <a href="blog3.html">Read More</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="right-image">
-                  <img src="assets/images/blog3.png" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="right-image-post">
-            <div class="row">
-              <div class="col-md-6" style="background-color: #9e0707c7">
-                <div class="left-text">
                   <h4>Simple Crawler with Python using BeautifulSoup</h4>
                   <span>Freshman's project</span>
+          
                   <p> Create a simple Crawling system. This is my first project and i got A mark <i class="fa fa-smile-o" aria-hidden="true"></i>
                     
                   </p>
@@ -250,7 +157,6 @@
               </div>
             </div>
           </div>
-       
 
 
           
@@ -322,5 +228,26 @@
         checkSection();
       });
     </script>
+    <script>
+      //Get the button
+      var mybutton = document.getElementById("myBtn");
+      
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+      
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+      </script>
   </body>
 </html>
